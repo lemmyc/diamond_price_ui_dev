@@ -6,7 +6,6 @@
 }
 .container{
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,15 +23,15 @@
 .value-input{
   margin: 16px 0;
   height: 36px;
-  width: 200px;
+  width: 250px;
   padding: 8px 16px;
   outline: none;
   font-size: 16px;
 }
 .btn{
   width: 200px;
-  height: 50px;
-  font-size: 24px;
+  height: 40px;
+  font-size: 20px;
   border: none;
   background-color: #7ed6df;
   color: black;
