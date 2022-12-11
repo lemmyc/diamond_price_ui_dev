@@ -12,27 +12,11 @@ submitBtn.onclick = (e)=>{
         break;
       }
     }
-    if(input.name == 'depth'){
-        let mean = 61.749322
-        let std = 1.432626
-        let scaledValue = (input.value - mean)/std
-        data = {
-          ...data,
-          [input.name] : scaledValue
-        }
-    }else if(input.name == 'table'){
-      let mean = 57.457251
-      let std = 2.234549
-      let scaledValue = (input.value - mean)/std
-      data = {
-        ...data,
-        [input.name] : scaledValue
-      }
-  }else
     data = {
       ...data,
       [input.name] : input.value
     }
+    
   }
 
   if(isValid === 1){
