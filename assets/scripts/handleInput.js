@@ -25,7 +25,9 @@ submitBtn.onclick = (e) => {
         };
       } else {
         isValid = 0;
+        price.style.color = 'red';
         price.innerHTML = `'${input.name}' is invalid !!!`;
+
         break;
       }
     } else {
@@ -39,6 +41,7 @@ submitBtn.onclick = (e) => {
   if (isValid === 1) {
     postData("https://diamond-price-prediction.onrender.com", data).then(
       (output) => {
+        price.style.color = '#22a6b3';
         price.innerHTML = `Predicted price: $${output}`;
       }
     );
