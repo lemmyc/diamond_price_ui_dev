@@ -6,9 +6,11 @@ submitBtn.onclick = (e)=>{
   data = {}
   isValid = 1
   for(let input of inputs){
-    if(input.value == '' || input.value.parseFloat === 0.00){
-      isValid = 0;
-      break;
+    if(input.name !== 'cut' && input.name !== 'color' && input.name !== 'clarity'){
+      if((input.value == '' || parseFloat(input.value) === 0)){
+        isValid = 0;
+        break;
+      }
     }
     if(input.name == 'depth'){
         let mean = 61.749322
