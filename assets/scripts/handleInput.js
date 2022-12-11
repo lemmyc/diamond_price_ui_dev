@@ -7,7 +7,7 @@ submitBtn.onclick = (e)=>{
   isValid = 1
   for(let input of inputs){
     if(input.name !== 'cut' && input.name !== 'color' && input.name !== 'clarity'){
-      if((input.value == '' || parseFloat(input.value) <= 0)){
+      if((input.value == '' || parseFloat(input.value) <= 0 ||  isNaN(parseFloat(input.value)))){
         isValid = 0;
         break;
       }
@@ -38,7 +38,7 @@ submitBtn.onclick = (e)=>{
   if(isValid === 1){
     postData('https://diamond-price-prediction.onrender.com', data)
     .then((output) => {
-      price.innerHTML = `Predicted price: ${output}`
+      price.innerHTML = `Predicted price: $${output}`
     });
   }else{
     price.innerHTML = `Input is invalid`
