@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <title>💎Diamond Price Prediction💎</title>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Diamond Price Prediction</h1>
+    <div>
+      <label for="carat" class="input-label">Carat</label>
+      <input id="carat" name="carat" class="value-input" type="text">
+    </div>
+    <div>
+      <label for="cut" class="input-label">Cut</label>
+      <select name="cut" class="value-input" id="cut" placeholder="Cut">
+        <option value="0">Fair</option>
+        <option value="1">Good</option>
+        <option value="4">Very good</option>
+        <option value="3">Premium</option>
+        <option value="2">Ideal</option>
+      </select>
+    </div>
+    <div>
+      <label for="color" class="input-label">Color</label>
+      <select name="color" class="value-input" id="color">
+        <option value="6">J</option>
+        <option value="5">I</option>
+        <option value="4">H</option>
+        <option value="3">G</option>
+        <option value="2">F</option>
+        <option value="1">E</option>
+        <option value="0">D</option>
+      </select>
+    </div>
+    <div>
+      <label for="clarity" class="input-label">Clarity</label>
+      <select name="clarity" class="value-input" id="clarity">
+        <option value="0">I1</option>
+        <option value="3">SI2</option>
+        <option value="2">SI1</option>
+        <option value="5">VS2</option>
+        <option value="4">VS1</option>
+        <option value="7">VVS2</option>
+        <option value="6">VVS1</option>
+        <option value="1">IF</option>
+      </select>
+    </div>
+    <div>
+      <label for="depth" class="input-label">Depth</label>
+      <input id="depth" name="depth" class="value-input" type="text">
+    </div>
+    <div>
+      <label for="table" class="input-label">Table</label>
+      <input id="table" name="table" class="value-input" type="text">
+    </div>
+    <div>
+      <label for="x" class="input-label">X</label>
+      <input id="x" name="x" class="value-input" type="text">
+    </div>
+    <div>
+      <label for="y" class="input-label">Y</label>
+      <input id="y" name="y" class="value-input" type="text">
+    </div>
+    <div>
+      <label for="z" class="input-label">Z</label>
+      <input id="z" name="z" class="value-input" type="text">
+    </div>
+    <button class="btn" id="submit-btn"> ༼ つ ◕_◕ ༽つ Predict</button>
+    <h1 id="price"></h1>
+  </div>
+
+
+
+  <script src="./assets/scripts/api.js"></script>
+  <script src="./assets/scripts/handleInput.js"></script>
+</body>
+</html> 
