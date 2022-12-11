@@ -7,7 +7,7 @@ submitBtn.onclick = (e)=>{
   isValid = 1
   for(let input of inputs){
     if(input.name !== 'cut' && input.name !== 'color' && input.name !== 'clarity'){
-      if((input.value == '' || parseFloat(input.value) === 0)){
+      if((input.value == '' || parseFloat(input.value) <= 0)){
         isValid = 0;
         break;
       }

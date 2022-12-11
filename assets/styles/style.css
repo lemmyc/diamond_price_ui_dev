@@ -24,13 +24,13 @@
 .value-input{
   margin: 16px 0;
   height: 36px;
-  width: 300px;
+  width: 200px;
   padding: 8px 16px;
   outline: none;
   font-size: 16px;
 }
 .btn{
-  width: 300px;
+  width: 200px;
   height: 50px;
   font-size: 24px;
   border: none;
