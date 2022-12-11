@@ -1,30 +1,28 @@
-const submitBtn = document.getElementById('submit-btn')
-const inputs = document.querySelectorAll('.value-input')
-const price = document.getElementById('price')
-submitBtn.onclick = (e)=>{
-  e.preventDefault()
-  data = {}
-  isValid = 1
-  for(let input of inputs){
-    if(input.name !== 'cut' && input.name !== 'color' && input.name !== 'clarity'){
-      if((input.value == '' || parseFloat(input.value) <= 0 ||  isNaN(parseFloat(input.value)))){
-        isValid = 0;
-        break;
-      }
+const submitBtn = document.getElementById("submit-btn");
+const inputs = document.querySelectorAll(".value-input");
+const price = document.getElementById("price");
+submitBtn.onclick = (e) => {
+  e.preventDefault();
+  data = {};
+  isValid = 1;
+  for (let input of inputs) {
+    if (/^[0-9.,]+$/.test(input.value)) {
+      data = {
+        ...data,
+        [input.name]: parseFloat(input.value),
+      };
+    }else{
+      isValid = 0;
+      price.innerHTML = `'${input.name}' is invalid !!!`;
+      break;
     }
-    data = {
-      ...data,
-      [input.name] : input.value
-    }
-    
   }
 
-  if(isValid === 1){
-    postData('https://diamond-price-prediction.onrender.com', data)
-    .then((output) => {
-      price.innerHTML = `Predicted price: $${output}`
-    });
-  }else{
-    price.innerHTML = `Input is invalid`
+  if (isValid === 1) {
+    postData("https://diamond-price-prediction.onrender.com", data).then(
+      (output) => {
+        price.innerHTML = `Predicted price: $${output}`;
+      }
+    );
   }
-}
+};
