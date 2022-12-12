@@ -5,6 +5,27 @@
   box-sizing: border-box;
   font-family: 'Fira Sans', sans-serif;
 }
+.modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .75);
+}
+.notification{
+  width: 360px;
+  height: 180px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .container{
   width: 100vw;
   display: flex;
@@ -45,8 +66,31 @@
 
 }
 #price{
-  margin: 32px 0;
+  margin: 16px 0;
 }
 .crew-member{
   margin: 2px 0;
+}
+
+.prediction-container{
+  height: 80px;
+}
+
+.loader {
+  border: 4px solid #b3adad; /* Light grey */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 2s linear infinite;
+  margin-top: 16px;
+}
+
+#predict-loading-ico{
+  display: none
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
