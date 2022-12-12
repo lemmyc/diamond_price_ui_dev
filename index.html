@@ -9,6 +9,15 @@
   <title>💎Diamond Price Prediction💎</title>
 </head>
 <body>
+
+  <div class="modal" id="init-modal">
+    <div class="notification">
+      <h1>Initializing Model...</h1>
+      <p>This won't take long</p>
+      <div class="loader"></div>
+    </div>
+  </div>
+
   <div class="container">
     <h1 id="title">Diamond Price Prediction</h1>
     <div>
@@ -71,7 +80,10 @@
       <input id="z" name="z" class="value-input" type="text">
     </div>
     <button class="btn" id="submit-btn">Predict</button>
-    <h1 id="price"></h1>
+    <div class="prediction-container">
+      <div class="loader" id="predict-loading-ico"></div>
+      <h1 id="price"></h1>
+    </div>
     <h2>CT294_06 - Nhóm 1</h2>
     <h3>Thành viên</h3>
 
