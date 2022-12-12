@@ -1,11 +1,22 @@
 const submitBtn = document.getElementById("submit-btn");
+
+const resetBtn = document.getElementById("reset-btn");
+const resetNoti = document.getElementById("reset-notification");
+const resetBtn_Yes = document.getElementById("yes-reset-btn");
+const resetBtn_No = document.getElementById("no-reset-btn");
+
 const initModal = document.getElementById("init-modal");
+const resetModal = document.getElementById("reset-modal");
+
+
 const predLoadIcon = document.getElementById("predict-loading-ico");
 const inputs = document.querySelectorAll(".value-input");
 const price = document.getElementById("price");
 
 
 function autorun(){
+  initModal.style.display = 'flex'
+
   data = {
     carat: 1,
     clarity: 0,
@@ -26,6 +37,35 @@ function autorun(){
 }
 autorun()
 
+resetBtn.onclick = (e)=>{
+  e.preventDefault();
+  resetModal.style.display = 'flex';
+}
+resetBtn_Yes.onclick = (e)=>{
+  e.preventDefault();
+  price.innerHTML = ``;
+  for(let input of inputs){
+    if(input.type === 'text'){
+      input.value = '';
+    }else{
+      if(input.name === 'color')
+        input.value = 6;
+      else
+        input.value = 0;
+    }
+  }
+  resetModal.style.display = 'none';
+}
+resetBtn_No.onclick = (e)=>{
+  e.preventDefault();
+  resetModal.style.display = 'none';
+}
+resetModal.onclick = (e)=>{
+  resetModal.style.display = 'none';
+}
+resetNoti.onclick = (e)=>{
+  e.stopPropagation();
+}
 
 submitBtn.onclick = (e) => {
   e.preventDefault();

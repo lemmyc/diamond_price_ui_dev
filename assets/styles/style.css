@@ -6,7 +6,6 @@
   font-family: 'Fira Sans', sans-serif;
 }
 .modal{
-  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -16,6 +15,7 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, .75);
+  cursor: pointer;
 }
 .notification{
   width: 360px;
@@ -25,7 +25,34 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  cursor: default;
 }
+#reset-modal{
+  display: none;
+}
+#yes-reset-btn{
+  margin-top: 8px;
+  width: 64px;
+  height: 32px;
+  background-color: #7ed6df;
+}
+#yes-reset-btn:hover{
+  background-color: #7ebfc5;
+
+}
+#no-reset-btn{
+  margin-top: 8px;
+  width: 64px;
+  height: 32px;
+  background-color: #e84747;
+  color: #fff;
+}
+#no-reset-btn:hover{
+  background-color: #cb3e3e;
+
+}
+
+
 .container{
   width: 100vw;
   display: flex;
@@ -51,19 +78,34 @@
   outline: none;
   font-size: 16px;
 }
+.btn-section{
+  display: flex;
+  width: 320px;
+  justify-content: center;
+}
 .btn{
-  width: 200px;
   height: 40px;
   font-size: 20px;
   border: none;
-  background-color: #7ed6df;
-  color: black;
+  color: #000;
   border-radius: 6px;
-}
-.btn:hover{
   cursor: pointer;
-  background-color: #87e2ec;
-
+  margin: 0 8px;
+}
+#submit-btn{
+  width: 200px;
+  background-color: #7ed6df;
+}
+#submit-btn:hover{
+  background-color: #7ebfc5;
+}
+#reset-btn{
+  width: 80px;
+  background-color: #e84747;
+  color: white;
+}
+#reset-btn:hover{
+  background-color: #cb3e3e;
 }
 #price{
   margin: 16px 0;

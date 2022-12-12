@@ -18,6 +18,17 @@
     </div>
   </div>
 
+  <div class="modal" id="reset-modal">
+    <div class="notification" id="reset-notification">
+      <h1>Reset all input data</h1>
+      <p>Are you sure?</p>
+      <div>
+        <Button class="btn" id="no-reset-btn">No</Button>
+        <Button class="btn" id="yes-reset-btn">Yes</Button>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <h1 id="title">Diamond Price Prediction</h1>
     <div>
@@ -79,7 +90,10 @@
       <label for="z" class="input-label">Z</label>
       <input id="z" name="z" class="value-input" type="text">
     </div>
-    <button class="btn" id="submit-btn">Predict</button>
+    <div class="btn-section">
+      <button class="btn" id="reset-btn">Reset</button>
+      <button class="btn" id="submit-btn">Predict</button>
+    </div>
     <div class="prediction-container">
       <div class="loader" id="predict-loading-ico"></div>
       <h1 id="price"></h1>
@@ -91,7 +105,7 @@
     <p class="crew-member">B2007206 - Trần Việt Quang</p>
   </div>
 
-
+  
 
   <script src="./assets/scripts/api.js"></script>
   <script src="./assets/scripts/handleInput.js"></script>
